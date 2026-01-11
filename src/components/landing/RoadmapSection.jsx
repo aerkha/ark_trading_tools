@@ -25,7 +25,8 @@ const roadmapData = [
     items: [
       'Machine Learning Model Training',
       'Historical Data Backtesting',
-      'Private Beta Access for VIPs'
+      'Private Beta Access for VIPs',
+      'ICO/Token Launch Preparation'
     ]
   },
   {
@@ -38,7 +39,8 @@ const roadmapData = [
     items: [
       'Official ML Bot Public Launch', // The main event
       'Automated Trading Integration with Major Crypto Exchanges',
-      'Real-time Market Adaptation'
+      'Real-time Market Adaptation',
+      'TGE and Liquidity Pool Establishment'
     ]
   }
 ];

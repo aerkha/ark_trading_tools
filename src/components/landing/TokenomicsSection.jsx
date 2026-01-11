@@ -1,13 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 // Data Alokasi Token yang sebenarnya (Standar Project Utility)
 const tokenomics = [
-  { label: 'Liquidity Pool', percentage: 100, color: 'from-cyan-400 to-cyan-600' },
-  { label: 'Community & Airdrop', percentage: 0, color: 'from-purple-400 to-purple-600' },
-  { label: 'Marketing & Partnerships', percentage: 0, color: 'from-green-400 to-green-600' },
-  { label: 'Development & Team', percentage: 0, color: 'from-orange-400 to-orange-600' },
-  { label: 'CEX Listing Reserve', percentage: 0, color: 'from-pink-400 to-pink-600' },
+  { label: 'Liquidity Pool', percentage: 45, color: 'from-cyan-400 to-cyan-600' },
+  { label: 'Community & Airdrop', percentage: 10, color: 'from-purple-400 to-purple-600' },
+  { label: 'Marketing & Partnerships', percentage: 10, color: 'from-green-400 to-green-600' },
+  { label: 'Development & Team', percentage: 10, color: 'from-orange-400 to-orange-600' },
+  { label: 'CEX Listing Reserve', percentage: 25, color: 'from-pink-400 to-pink-600' },
 ];
 
 export default function TokenomicsSection() {
@@ -27,12 +28,9 @@ export default function TokenomicsSection() {
               Token
             </span>{' '}
             <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-              Allocation
+              Allocation Plan
             </span>
           </h2>
-          <p className="text-gray-500 max-w-2xl mx-auto text-lg">
-            100% Fairlaunch - Community driven tokenomics.
-          </p>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -143,7 +141,7 @@ export default function TokenomicsSection() {
           transition={{ duration: 0.6 }}
         >
           {[
-            { label: 'Network', value: 'Solana' },
+            { label: 'Network', value: 'Undecided' },
             { label: 'Buy / Sell Tax', value: '0% / 0%' },
           ].map((item, i) => (
             <div
@@ -160,6 +158,18 @@ export default function TokenomicsSection() {
             </div>
           ))}
         </motion.div>
+      </div>
+      <div className="flex justify-center items-center mt-12">
+        
+        {/* 2. Masukkan tombol <Link> Anda di dalamnya */}
+        <Link to="/whitelist">
+          <button className="relative px-10 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full font-bold text-white text-xl shadow-xl shadow-cyan-500/30 hover:scale-105 hover:shadow-cyan-400/50 transition-all duration-300 group">
+            🚀 Join Whitelist Presale
+            {/* Efek kilau halus saat hover */}
+            <div className="absolute inset-0 rounded-full ring-2 ring-white/10 group-hover:ring-white/30 transition-all" />
+          </button>
+        </Link>
+        
       </div>
     </section>
   );

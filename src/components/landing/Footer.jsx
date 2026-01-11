@@ -46,7 +46,7 @@ export default function Footer() {
               </svg>
             </a>
             <a
-              href="https://t.me/Aerkha_signal_bot"
+              href="https://t.me/arktradingtools"
               target="_blank"
               rel="noopener noreferrer"
               className="w-12 h-12 rounded-xl
