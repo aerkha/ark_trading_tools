@@ -20,7 +20,7 @@ export default function CommunitySection() {
       name: 'Telegram Bot',
       description: 'Start receiving signals now',
       icon: Send,
-      href: 'https://t.me/arktradingtools',
+      href: 't.me/ark_signals_official',
       color: 'from-blue-500 to-blue-700',
       hoverColor: 'group-hover:text-blue-400',
     },
