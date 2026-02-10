@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Rocket, Sparkles } from 'lucide-react';
+import { Rocket, Sparkles, Laptop } from 'lucide-react'; // Import Icon Laptop
+import { Link } from 'react-router-dom'; // Import Link untuk navigasi internal
 import botIcon from '../../assets/bot_icon.png';
 
 export default function HeroSection() {
@@ -85,40 +86,57 @@ export default function HeroSection() {
           Professional trading signals delivered instantly. Smart automated trading bot. Maximize your profits with AI-driven market analysis.
         </motion.p>
 
-        {/* CTA Buttons */}
+        {/* CTA Buttons Container */}
         <motion.div
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+          className="flex flex-col md:flex-row gap-4 justify-center items-center flex-wrap"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
+          {/* Tombol 1: Buy Bot (External) */}
           <a
             href="https://whop.com/ark-96ce/" 
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative px-8 py-4 rounded-2xl
+            className="w-full md:w-auto group relative px-8 py-4 rounded-2xl
             bg-gradient-to-br from-[#1e1e2f] to-[#12121c]
             shadow-[8px_8px_24px_#0d0d14,-8px_-8px_24px_#252538]
             hover:shadow-[inset_8px_8px_24px_#0d0d14,inset_-8px_-8px_24px_#252538]
             transition-all duration-300 ease-out
             border border-cyan-500/20 hover:border-cyan-400/40
-            flex items-center gap-3"
+            flex items-center justify-center gap-3"
           >
             <Rocket className="w-5 h-5 text-cyan-400 group-hover:rotate-12 transition-transform" />
-            <span className="text-white font-semibold">Buy or Try MT5 Trading Bot</span>
+            <span className="text-white font-semibold">Buy MT5 Bot</span>
           </a>
 
+          {/* Tombol 2: Open Trading App (Internal Link) - NEW */}
+          <Link
+            to="/trading-app" 
+            className="w-full md:w-auto group relative px-8 py-4 rounded-2xl
+            bg-gradient-to-r from-cyan-600/20 to-blue-600/20
+            shadow-[8px_8px_24px_#0d0d14,-8px_-8px_24px_#252538]
+            hover:shadow-[0px_0px_20px_rgba(6,182,212,0.3)]
+            transition-all duration-300 ease-out
+            border border-cyan-400/50 hover:border-cyan-400
+            flex items-center justify-center gap-3"
+          >
+            <Laptop className="w-5 h-5 text-cyan-300 group-hover:scale-110 transition-transform" />
+            <span className="text-cyan-100 font-bold">Open Web App</span>
+          </Link>
+
+          {/* Tombol 3: Get Signals (External) */}
           <a
             href="https://t.me/Aerkha_signal_bot" 
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative px-8 py-4 rounded-2xl
+            className="w-full md:w-auto group relative px-8 py-4 rounded-2xl
             bg-gradient-to-br from-[#1e1e2f] to-[#12121c]
             shadow-[8px_8px_24px_#0d0d14,-8px_-8px_24px_#252538]
             hover:shadow-[inset_8px_8px_24px_#0d0d14,inset_-8px_-8px_24px_#252538]
             transition-all duration-300 ease-out
             border border-purple-500/20 hover:border-purple-400/40
-            flex items-center gap-3"
+            flex items-center justify-center gap-3"
           >
             <Sparkles className="w-5 h-5 text-purple-400 group-hover:scale-110 transition-transform" />
             <span className="text-white font-semibold">Get Signals</span>
