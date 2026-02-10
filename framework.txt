@@ -1,0 +1,26 @@
+ark-project/
+├── backend/                   <-- (Area Python & CCXT)
+│   ├── main.py                <-- Entry point API (FastAPI/Flask)
+│   ├── requirements.txt       <-- Daftar library (ccxt, pandas, fastapi, uvicorn)
+│   ├── .env                   <-- Simpan Database URL & Secret Key disini
+│   ├── database/
+│   │   └── trading.db         <-- SQLite untuk simpan User & Log Transaksi
+│   └── bot_engine/            <-- (Inti Algoritma Trading Anda)
+│       ├── __init__.py
+│       ├── strategy.py        <-- Logika Buy/Sell (RSI, MACD, SMC)
+│       └── executor.py        <-- Eksekusi Order via CCXT
+│
+└── frontend/                  <-- (Area React Vite Anda saat ini)
+    ├── package.json
+    ├── tailwind.config.js
+    ├── src/
+    │   ├── App.jsx            <-- Routing utama
+    │   ├── main.jsx
+    │   ├── components/
+    │   │   ├── landing/       <-- (HeroSection, Tokenomics, dll)
+    │   │   └── dashboard/     <-- (FOLDER BARU UNTUK APP TRADING)
+    │   │       ├── TradingApp.jsx      <-- File UI Utama
+    │   │       ├── ApiConfigForm.jsx   <-- Form Input API Key
+    │   │       └── TradeConsole.jsx    <-- Tampilan Log Berjalan
+    │   └── assets/
+    └── .env                   <-- URL Backend API (VITE_API_URL=http://localhost:8000)

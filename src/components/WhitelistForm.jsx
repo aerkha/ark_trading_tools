@@ -133,7 +133,9 @@ const WhitelistForm = () => {
                 <option value="BSC">BSC (BEP20)</option>
                 <option value="BASE">BASE</option>
                 <option value="ETH">ETH (ERC20)</option>
+                <option value="ARBITRUM">ARBITRUM (ERC20)</option>
                 <option value="TRX">TRON (TRC20)</option>
+                <option value="SOLANA">SOL (SPL)</option>
               </select>
             </div>
 
@@ -143,8 +145,8 @@ const WhitelistForm = () => {
               <input 
                 type="number" 
                 name="Amount"
-                placeholder="Min 50"
-                min="50"
+                placeholder="Min 200"
+                min="200"
                 required
                 className="w-full bg-slate-800/50 border border-slate-600/50 rounded-lg p-3 text-white focus:outline-none focus:border-cyan-400 transition"
                 onChange={handleChange}
